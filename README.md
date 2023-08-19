@@ -3,7 +3,7 @@
 
 # Equipe `Sexteto Sinistro [SEXTO]`
 
-# Subgrupo `<letra do subgrupo>`
+# Subgrupo `PONTE`
 * `Gabriel Alves de Arruda` - `248132`
 * `Antonio Hideto Borges Kotsubo` - `<RA>`
 * `Guilherme Brentan de Oliveira` - `252764`

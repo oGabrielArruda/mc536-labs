@@ -4,7 +4,7 @@
 
 # Subgrupo `PONTE`
 * `Gabriel Alves de Arruda` - `248132`
-* `Antonio Hideto Borges Kotsubo` - `<RA>`
+* `Antonio Hideto Borges Kotsubo` - `236041`
 * `Guilherme Brentan de Oliveira` - `252764`
 
 ## Modelo Conceitual ER

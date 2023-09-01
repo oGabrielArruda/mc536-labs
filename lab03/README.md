@@ -13,7 +13,7 @@ Estrutura de pastas:
 
 <img src="images/ER_Diagram.png" width="400px" height="auto">
 
-*Diagrama ER Revisado*
+*Diagrama ER Original*
 
 ## Mapeamento para o Modelo Relacional
 

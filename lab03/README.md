@@ -1,4 +1,4 @@
-# - Modelagem Relacional de Refeições em um Restaurante
+# Modelagem Relacional de Refeições em um Restaurante
 
 Estrutura de pastas:
 

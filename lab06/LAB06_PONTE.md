@@ -124,7 +124,11 @@ LIMIT 20
 
 ## Exercício
 
-Faça a projeção em relação a Patologia, ou seja, conecte patologias que são tratadas pela mesma droga.
+MATCH (p1:Pathology)<-[t1]-(d:Drug)-[t2]->(p2:Pathology)
+WHERE t1.weight > 20 AND t2.weight > 20  // to reduce the number of operations
+MERGE (p1)<-[r:Relates]->(p2)
+ON CREATE SET r.weight=1
+ON MATCH SET r.weight=r.weight+1
 
 ### Resolução
 ~~~cypher

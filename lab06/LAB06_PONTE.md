@@ -151,43 +151,24 @@ Construa um grafo ligando os medicamentos aos efeitos colaterais (com pesos asso
 
 ### Resolução
 ~~~cypher
-// first, let's create the DrugUse entity
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/drug-use.csv' AS line
-CREATE (:DrugUse {idPerson: line.idperson, codePathology: line.codepathology, codeDrug: line.codedrug})
-
-// then let's create the SideEffect entity
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/sideeffect.csv' AS line
-CREATE (:SideEffect {idPerson: line.idPerson, codePathology: line.codePathology})
-
-MATCH (se:SideEffect)
-MATCH (du:DrugUse {idPerson: se.idPerson})
-MATCH (d:Drug {code: du.codeDrug})
-MATCH (p:Pathology {code:se.codePathology})
-MERGE (d)-[t:Treats]->(p)
+MERGE (per:Person {idPerson: line.idperson})
+MERGE (d:Drug {code: line.codedrug})
+MERGE (d)-[t:Treats]->(per)
 ON CREATE SET t.weight=1
 ON MATCH SET t.weight=t.weight+1
-
-// another approach would be to create a table called `Person`, with just one column `idPerson`, through the information from one the above csv files
-
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/drug-use.csv' AS line
-CREATE (:Person {idPerson: line.idperson})
-
-// then create the relations
-
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/drug-use.csv' AS line
-MATCH (d:Drug {code: line.codedrug})
-MATCH (p:Person {code: line.idperson})
-CREATE (d)-[:Treats}]->(p)
 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/sideeffect.csv' AS line
 MATCH (pat:Pathology {code: line.codePathology})
-MATCH (per:Person {code: line.idPerson})
-CREATE (per)-[:Has]->(pat)
+MATCH (per:Person {idPerson: line.idPerson})
+MERGE (per)-[h:Has]->(pat)
+ON CREATE SET h.weight=1
+ON MATCH SET h.weight=h.weight+1
 
-MATCH (d:Drug)-[a]->(per:Person)-[b]->(pat:Pathology)
-MERGE (d)-[t:Treats]->(pat)
-ON CREATE SET t.weight=1
-ON MATCH SET t.weight=t.weight+1
+MATCH (d1:Drug)-[a]->(per1:Person)-[b]->(pat1:Pathology)
+MERGE (d1)-[c:Causes]->(pat1)
+ON CREATE SET c.weight=1
+ON MATCH SET c.weight=c.weight+1
 ~~~
 
 ## Exercício

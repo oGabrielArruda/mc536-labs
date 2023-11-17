@@ -177,6 +177,8 @@ Que tipo de análise interessante pode ser feita com esse grafo?
 
 Proponha um tipo de análise e escreva uma sentença em Cypher que realize a análise.
 
+R: Nós podemos analisar quantos efeitos colaterais cada medicamento causa
+
 ### Resolução
 ~~~cypher
 (escreva aqui a resolução em Cypher)

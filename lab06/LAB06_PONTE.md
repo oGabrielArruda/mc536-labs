@@ -182,10 +182,10 @@ CREATE (d)-[:Treats}]->(p)
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/sideeffect.csv' AS line
 MATCH (pat:Pathology {code: line.codePathology})
 MATCH (per:Person {code: line.idPerson})
-CREATE (per)-[:has]->(pat)
+CREATE (per)-[:Has]->(pat)
 
 MATCH (d:Drug)-[a]->(per:Person)-[b]->(pat:Pathology)
-MERGE (d)<-[t:Treats]->(pat)
+MERGE (d)-[t:Treats]->(pat)
 ON CREATE SET t.weight=1
 ON MATCH SET t.weight=t.weight+1
 ~~~

@@ -6,7 +6,7 @@ Estrutura de pastas:
 ├── README.md  <- arquivo apresentando a tarefa
 ~~~
 
-# Equipe `SEXTETO`
+# Equipe `Sexteto Sinistro [SEXTO]`
 
 # Subgrupo `PONTE`
 * `Antônio Hideto Borges Kotsubo` - `236041`

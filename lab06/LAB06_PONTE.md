@@ -177,9 +177,11 @@ Que tipo de análise interessante pode ser feita com esse grafo?
 
 Proponha um tipo de análise e escreva uma sentença em Cypher que realize a análise.
 
-R: Nós podemos analisar quantos efeitos colaterais cada medicamento causa
+R: Nós podemos analisar ver quantos efeitos colaterais uma droga causa, pesquisando pelo seu nome
 
 ### Resolução
 ~~~cypher
-(escreva aqui a resolução em Cypher)
+MATCH p=(d:Drug)-[r:Causes]->()
+WHERE d.name = 'XTANDI'
+RETURN p
 ~~~

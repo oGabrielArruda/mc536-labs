@@ -6,9 +6,9 @@ Estrutura de pastas:
 ├── README.md  <- arquivo apresentando a tarefa
 ~~~
 
-# Equipe `<nome da equipe>`
+# Equipe `SEXTETO`
 
-# Subgrupo `<letra do subgrupo>`
+# Subgrupo `PONTE`
 * `Antônio Hideto Borges Kotsubo` - `236041`
 * `Gabriel Alves de Arruda` - `248132`
 * `Guilherme Brentan de Oliveira` - `252764`

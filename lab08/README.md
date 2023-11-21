@@ -1,6 +1,6 @@
 ## Modelo Lógico do Banco de Dados de Grafos
 > Coloque aqui o modelo lógico.
-> ![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
+> ![Modelo Lógico de Grafos](images/lab8.png)
 
 ## Perguntas de Pesquisa/Análise Combinadas e Respectivas Análises
 

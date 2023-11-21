@@ -1,8 +1,5 @@
 ## Modelo Lógico do Banco de Dados de Grafos
 > Coloque aqui o modelo lógico.
-> Utilize este [modelo de base](https://docs.google.com/presentation/d/10RN7bDKUka_Ro2_41WyEE76Wxm4AioiJOrsh6BRY3Kk/edit?usp=sharing) para construir o seu.
-> Coloque a imagem do PNG do seu modelo lógico como ilustrado abaixo (a imagem estará na pasta `image`):
->
 > ![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
 
 ## Perguntas de Pesquisa/Análise Combinadas e Respectivas Análises
@@ -10,16 +7,16 @@
 > Liste aqui as perguntas de pesquisa/análise e respectivas análises.
 >
 ### Pergunta/Análise 1
-> * Pergunta 1
+> * Quais as commodities mais utilizadas?
 >   
->   * Explicação sucinta da análise que será feita no grafo para atender à pergunta. Deve ser indicado explicitamente em qual das modalidades a análise se encaixa: centralidade; vulnerabilidade; comunidade/modularidade; motifs; predição de links.
+>   * Utilzando a centralidade, podemos visualizar quais Nos são mais utilizadas em Receitas, usando a propriedade Belongs to na relaçao Commodity -> Recipe
 
 ### Pergunta/Análise 2
-> * Pergunta 2
+> * Qual é o status de cozimento (cooked_status) mais comum para cada commoditie?
 >   
->   * Explicação sucinta da análise que será feita no grafo para atender à pergunta. Deve ser indicado explicitamente em qual das modalidades a análise se encaixa: centralidade; vulnerabilidade; comunidade/modularidade; motifs; predição de links.
+>   * Utilizando a comunidade/modularidade, podemos criar uma relação entre o status de cozimento com a commoditie pertencente a cada receita. Desta forma podemos visualizar quais casos mais comuns para cada tipo analisado. 
 
 ### Pergunta/Análise 3
-> * Pergunta 3
+> *  Quais comidas utilizam a maior quantidade de ingredientes para serem feitas?
 >   
->   * Explicação sucinta da análise que será feita no grafo para atender à pergunta. Deve ser indicado explicitamente em qual das modalidades a análise se encaixa: centralidade; vulnerabilidade; comunidade/modularidade; motifs; predição de links.
+>   * Utilizando a comunidade/modularidade, podemos unir receitas que possuem um grande numero de commodidites, e analisar quais grupos de comidas são preparadas com o maior uso de ingredientes.
